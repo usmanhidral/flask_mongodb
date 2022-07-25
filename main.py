@@ -21,6 +21,9 @@ jwt = JWTManager(app)  # initialize JWTManager
 app.config['JWT_SECRET_KEY'] = 'Your_Secret_Key'
 app.config['JWT_ACCESS_TOKEN_EXPIRES'] = datetime.timedelta(days=1)  # define the life span of the token
 
+@app.route("/", methods=['get'])
+def register():
+    return "Welcome to Usman Mongo Db Python Web"
 
 @app.route("/register", methods=['post'])
 def register():
